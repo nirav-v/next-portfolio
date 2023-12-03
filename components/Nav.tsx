@@ -110,7 +110,7 @@ export default function Nav() {
   );
 }
 
-function MenuIcon(props) {
+function MenuIcon(props: any) {
   return (
     <svg
       className="h-5 w-5 absolute text-gray-100"
@@ -137,7 +137,7 @@ function MenuIcon(props) {
   );
 }
 
-function CrossIcon(props) {
+function CrossIcon(props: any) {
   return (
     <svg
       className="h-5 w-5 absolute text-gray-100"

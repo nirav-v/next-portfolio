@@ -1,8 +1,7 @@
-import React from "react";
-import ProjectList from "./projects/ProjectList";
+import { ReactNode } from "react";
 import ProjectCard from "./projects/ProjectCard";
 
-export default function Home({ children }: { children: React.ReactNode }) {
+export default function Home() {
   return (
     <>
       {" "}
