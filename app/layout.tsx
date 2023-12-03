@@ -24,6 +24,7 @@ export default function RootLayout({
           {/* <div className="-m-5 block sm:hidden z-100">
         <MobileNavbar />
       </div> */}
+
           <Nav />
           <div className="hidden sm:block z-100"></div>
           {children}

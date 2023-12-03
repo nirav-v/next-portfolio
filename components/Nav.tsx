@@ -39,10 +39,11 @@ export default function Nav() {
       document.body.style.overflow = "";
     };
   }, []);
+
   return (
     <>
       {/* need to add a mobile navbar to show on sm screens */}
-      <div className="hidden sm:block z-100">
+      <div className="block z-100">
         <nav className="flex items-center justify-between">
           <li className="list-none font-bold text-lg cursor-pointer"></li>
           <ul className="flex items-center space-x-10">
