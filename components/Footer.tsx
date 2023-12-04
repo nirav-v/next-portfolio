@@ -4,19 +4,19 @@ import Link from "next/link";
 const footerLinks = [
   {
     name: "GitHub",
-    link: "https://github.com/braydentw",
+    link: "https://github.com/nirav-v",
     icon: "/static/icons/github-f.svg",
     leavesWebsite: true,
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/braydentw/",
+    link: "https://www.linkedin.com/in/nirav-venkatesan/",
     icon: "/static/icons/linkedin-f.svg",
     leavesWebsite: true,
   },
   {
     name: "Email",
-    link: "mailto:contact@braydentw.io",
+    link: "#",
     icon: "/static/icons/mail-f.svg",
     leavesWebsite: true,
   },
