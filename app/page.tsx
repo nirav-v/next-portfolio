@@ -1,19 +1,19 @@
-import { ReactNode } from "react";
-import ProjectCard from "./projects/ProjectCard";
+import { ReactNode } from 'react';
+import ProjectCard from './projects/ProjectCard';
 
 export default function Home() {
   return (
     <>
-      {" "}
+      {' '}
       <div
-        className="relative heroElem w-full pt-20 md:pb-40 m-auto flex justify-center text-center flex-col items-center z-1"
-        style={{ maxWidth: "1200px" }}>
+        className="relative heroElem w-full pt-20  m-auto flex justify-center text-center flex-col items-center z-1"
+        style={{ maxWidth: '1200px' }}>
         <p className="text-xl mb-5">Hi, I'm Nirav 👋</p>
         <h1 className="heroTitle inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-5xl md:text-6xl lg:text-7xl tracking-tighter mb-10 font-bold heroShinyBg">
-          I am a{" "}
+          I am a{' '}
           <span className="heroShiny1 text-rose-600">
             Full Stack Software Engineer
-          </span>{" "}
+          </span>{' '}
           {/* and 
           <span className="heroShiny2 text-slate-600">Skateboarder</span>{" "} */}
           based in <span className="text-orange-600">San Diego, CA</span>
@@ -28,20 +28,20 @@ export default function Home() {
         <ProjectCard
           project={{
             id: 0,
-            title: "Hardpost",
-            desc: "Social e-commerce platform for skateboarders",
-            img: "/static/projects/hp.png",
-            link: "https://hardpost-f79ecee5b44d.herokuapp.com/",
-            github: "https://github.com/nirav-v/hardpost",
+            title: 'Hardpost',
+            desc: 'Social e-commerce platform for skateboarders',
+            img: '/static/projects/hp.png',
+            link: 'https://hardpost-f79ecee5b44d.herokuapp.com/',
+            github: 'https://github.com/nirav-v/hardpost',
             tags: [
-              "React",
-              "Node.js",
-              "Express",
-              "MySQL",
-              "AWS",
-              "Sequelize",
-              "Stripe",
-              "Chakra UI",
+              'React',
+              'Node.js',
+              'Express',
+              'MySQL',
+              'AWS',
+              'Sequelize',
+              'Stripe',
+              'Chakra UI',
             ],
           }}
         />
