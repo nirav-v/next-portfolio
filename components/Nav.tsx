@@ -1,42 +1,44 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+'use client';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const routes: {
   title: string;
   path: string;
 }[] = [
   {
-    title: "Home",
-    path: "/",
+    title: 'Home',
+    path: '/',
   },
   {
-    title: "Projects",
-    path: "/projects",
+    title: 'Projects',
+    path: '/projects',
   },
   {
-    title: "About",
-    path: "/about",
+    title: 'About',
+    path: '/about',
   },
 ];
 export default function Nav() {
-  const [activeTab, setActiveTab] = useState("Home");
+  const pathname = usePathname();
+
   // for mobile
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     } else {
       setIsMenuOpen(true);
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     }
   }
 
   useEffect(() => {
     return function cleanup() {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, []);
 
@@ -51,18 +53,17 @@ export default function Nav() {
               return (
                 <li
                   key={index}
-                  onClick={() => setActiveTab(item.title)}
                   className={`list-none text-white ${
-                    activeTab === item.title
-                      ? "opacity-100"
-                      : "opacity-40 hover:opacity-100 transition-opacity"
+                    pathname === item.path
+                      ? 'opacity-100'
+                      : 'opacity-40 hover:opacity-100 transition-opacity'
                   }`}>
                   <Link href={item.path}>{item.title}</Link>
                 </li>
               );
             })}
           </ul>
-        </nav>{" "}
+        </nav>{' '}
       </div>
       {/* <div className="-m-5 block sm:hidden z-100">
         <nav>
