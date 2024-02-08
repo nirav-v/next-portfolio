@@ -1,4 +1,4 @@
-import { ProjectType } from '@/types/project';
+import { ProjectType } from '@/types/ProjectType';
 import ProjectCard from './ProjectCard';
 import {
   SiAmazonaws,
