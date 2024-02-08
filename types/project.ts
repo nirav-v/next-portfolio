@@ -5,5 +5,5 @@ export type ProjectType = {
   img: string;
   link?: string;
   github?: string;
-  tags: string[];
+  tags: { name: string; icon: React.JSX.Element }[];
 };

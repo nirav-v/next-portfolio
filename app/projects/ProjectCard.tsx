@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectType } from '../../types/project';
+import ProjectTag from './ProjectTag';
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
   return (
@@ -44,13 +45,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         <p className="text-fun-gray text-left text-sm">{project.desc}</p>
         <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
           {project.tags.map(tag => {
-            return (
-              <li key={tag}>
-                <div className="m-1 rounded-lg text-sm bg-fun-pink-dark py-1 px-2 cursor-pointer">
-                  {tag}
-                </div>
-              </li>
-            );
+            return <ProjectTag tag={tag} />;
           })}
         </ul>
       </div>

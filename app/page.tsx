@@ -1,5 +1,15 @@
 import { ReactNode } from 'react';
 import ProjectCard from './projects/ProjectCard';
+import {
+  SiAmazonaws,
+  SiChakraui,
+  SiExpress,
+  SiSequelize,
+  SiStripe,
+  SiVite,
+} from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
+import { GrMysql } from 'react-icons/gr';
 
 export default function Home() {
   return (
@@ -34,14 +44,14 @@ export default function Home() {
             link: 'https://hardpost-f79ecee5b44d.herokuapp.com/',
             github: 'https://github.com/nirav-v/hardpost',
             tags: [
-              'React',
-              'Node.js',
-              'Express',
-              'MySQL',
-              'AWS',
-              'Sequelize',
-              'Stripe',
-              'Chakra UI',
+              { name: 'React', icon: <SiVite /> },
+              { name: 'Node.js', icon: <FaNodeJs /> },
+              { name: 'Express', icon: <SiExpress /> },
+              { name: 'MySQL', icon: <GrMysql /> },
+              { name: 'AWS', icon: <SiAmazonaws /> },
+              { name: 'Sequelize', icon: <SiSequelize /> },
+              { name: 'Stripe', icon: <SiStripe /> },
+              { name: 'Chakra UI', icon: <SiChakraui /> },
             ],
           }}
         />
