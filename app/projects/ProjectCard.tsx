@@ -50,7 +50,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         <p className="text-fun-gray text-left text-lg">{project.desc}</p>
         <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
           {project.tags.map(tag => {
-            return <ProjectTag tag={tag} />;
+            return <ProjectTag key={tag.name} tag={tag} />;
           })}
         </ul>
       </div>
