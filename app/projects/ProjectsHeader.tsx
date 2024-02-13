@@ -3,7 +3,7 @@ import React from 'react';
 export default function ProjectsHeader() {
   return (
     <>
-      <div className="mx-auto p-6 mb-6 max-w-2xl lg:mx-0">
+      <div className="mx-auto p-6 mb-6 max-w-2xl ">
         <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
           My Projects
         </h2>
