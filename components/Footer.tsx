@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import SectionHeader from './SectionHeader';
 
 const footerLinks = [
   {
@@ -16,17 +17,14 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <div className="mt-16 md:border-t-2 border-white flex flex-col items-center">
-      <h2 className="relative bottom-4 bg-black px-4 text-xl font-bold">
-        {' '}
-        Get in touch
-      </h2>
+    <div className='mt-16 md:border-t-2 border-white flex flex-col items-center'>
+      <SectionHeader title='Link Up!' />
       {footerLinks.map((item, index) => {
         return (
-          <div key={index} className="my-4">
-            <a href={item.link} target="_blank" className="items-center flex ">
+          <div key={index} className='my-4'>
+            <a href={item.link} target='_blank' className='items-center flex '>
               {item.icon && (
-                <span className="pr-2 -mb-1">
+                <span className='pr-2 -mb-1'>
                   <Image
                     alt={item.name}
                     src={item.icon}
@@ -35,7 +33,7 @@ export default function Footer() {
                   />
                 </span>
               )}
-              <p className="hover:opacity-75">{item.name}</p>
+              <p className='hover:opacity-75'>{item.name}</p>
             </a>
           </div>
         );
