@@ -8,15 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // backgroundImage: {
-      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      //   "gradient-conic":
-      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      // },
       keyframes: {
-        "fade-in-out": {
-          "0%, 100%": { backgroundColor: "black" }, // Start and end with black
-          "50%": { backgroundColor: "#ebf8ff", color: "black" }, // Middle of animation with blue-50
+        wave: {
+          "0%, 100%": { transform: "rotate(0deg)" }, // At the start and end, no rotation
+          "50%": { transform: "rotate(15deg)" }, // Rotate 15 degrees at the midpoint
         },
         "letter-color": {
           "0%, 100%": { color: "#FF5733" },
@@ -26,8 +21,8 @@ const config: Config = {
         },
       },
       animation: {
-        "fade-in-out": "fade-in-out 3s ease-in-out infinite", // 3s duration, infinite loop
-        "letter-color": "letter-color 4s ease-in-out infinite", // Define the animation
+        "letter-color": "letter-color 4s ease-in-out infinite",
+        wave: "wave 1s ease-in-out infinite",
       },
     },
   },

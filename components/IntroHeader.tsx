@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function IntroHeader() {
@@ -13,7 +14,7 @@ function IntroHeader() {
     <>
       <p className="text-2xl my-5 p-2 rounded-full font-bold ">
         {"Hi, I'm "}
-        {Array.from("Nirav 👋").map((char, index) => {
+        {Array.from("Nirav").map((char, index) => {
           // Check if the character is a space and preserve it
           if (char === " ") {
             return " ";
@@ -31,6 +32,7 @@ function IntroHeader() {
             </span>
           );
         })}
+        <span className="px-2 inline-block animate-wave">👋🏽 </span>
       </p>
     </>
   );
