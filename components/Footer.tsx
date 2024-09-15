@@ -17,7 +17,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <div className=" md:border-t-2 border-white flex flex-col items-center">
+    <div className="p-8 border-white flex flex-col items-center">
       <SectionHeader title="Link Up!" />
       {footerLinks.map((item, index) => {
         return (

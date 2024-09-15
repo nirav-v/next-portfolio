@@ -1,23 +1,29 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { ProjectType } from '../../types/ProjectType';
-import ProjectTag from './ProjectTag';
+import Image from "next/image";
+import Link from "next/link";
+import { ProjectType } from "../../types/ProjectType";
+import ProjectTag from "./ProjectTag";
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
   return (
-    <div className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center">
+    <div className="mx-auto flex flex-col projects-center md:projects-start md:justify-center">
       <a
         href={project.link || project.github}
         target="_blank"
-        className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}>
+        className={`w-[500px] h-[350px] m-auto relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}>
         <Image
           priority
-          className="w-full rounded-md"
+          className="rounded-md w-full h-full object-cover"
           width={500}
           height={500}
           src={project.img}
           alt={`${project.title} landing page image`}
         />
+        {/* <div
+          className="rounded-md"
+          style={{
+            backgroundImage: `url(${project.img})`,
+            backgroundSize: "contain",
+          }}></div> */}
       </a>
       <div className="w-full mt-5">
         <div className="flex projects-center justify-between">
