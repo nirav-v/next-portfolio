@@ -1,6 +1,29 @@
 "use client";
 import React, { useState } from "react";
 
+/** This function is responsible for updating the chat history in localStorage */
+const updateChatHistory = (user_query: string, modelResponse: string) => {
+  const historyString = localStorage.getItem("chat-history");
+
+  // parse the local storage history to array, if null default to empty arr
+  const history = historyString ? JSON.parse(historyString) : [];
+
+  // add the user query and the response received to the chat history
+  const updatedHistory = [
+    ...history,
+    { role: "user", content: user_query },
+    {
+      role: "assistant",
+      content: modelResponse,
+    },
+  ];
+
+  // write the updated history back to local storage
+  localStorage.setItem("chat-history", JSON.stringify(updatedHistory));
+
+  return updatedHistory;
+};
+
 export default function ChatInterface() {
   const [userQuery, setUserQuery] = useState("");
   const [modelResponse, setModelResponse] = useState("");
@@ -15,7 +38,10 @@ export default function ChatInterface() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ user_query: userQuery }),
+      body: JSON.stringify({
+        user_query: userQuery,
+        chat_history: localStorage.getItem("chat-history"), // backend handles if this is null
+      }),
     })
       .then(res => {
         setLoading(false);
@@ -24,6 +50,7 @@ export default function ChatInterface() {
       .then(data => {
         console.log(data);
         setModelResponse(data.modelResponse);
+        updateChatHistory(userQuery, data.modelResponse);
       });
   };
 
@@ -34,7 +61,7 @@ export default function ChatInterface() {
           type="text"
           onChange={e => setUserQuery(e.target.value)}
           value={userQuery}
-          placeholder="Chat with AI Nirav: Ask me anything..."
+          placeholder="Chat with Nirav: Ask me anything..."
           className="input input-bordered w-96 p-4 rounded-lg"
         />
       </form>

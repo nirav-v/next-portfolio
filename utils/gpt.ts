@@ -1,13 +1,23 @@
-import OpenAI from 'openai';
+import OpenAI from "openai";
+import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 const openai = new OpenAI();
 
-export async function getGptResponse(user_query: string) {
+export async function getGptResponse(
+  user_query: string,
+  chat_history: ChatCompletionMessageParam[] = []
+) {
+  console.log(chat_history);
+  if (!chat_history) chat_history = [];
   const completion = await openai.chat.completions.create({
-    messages: [{ role: 'system', content: aiNiravPrompt(user_query) }],
-    model: 'gpt-3.5-turbo',
+    messages: [
+      { role: "system", content: aiNiravPrompt(user_query) },
+      ...chat_history,
+      { role: "user", content: user_query },
+    ],
+    model: "gpt-3.5-turbo",
   });
 
-  console.log(completion.choices[0]);
+  // console.log(completion.choices[0]);
   return completion.choices[0].message.content;
 }
 

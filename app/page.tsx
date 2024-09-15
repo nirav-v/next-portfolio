@@ -1,16 +1,4 @@
-import ProjectCard from "./projects/ProjectCard";
-import {
-  SiAmazonaws,
-  SiChakraui,
-  SiExpress,
-  SiSequelize,
-  SiStripe,
-  SiVite,
-} from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { GrMysql } from "react-icons/gr";
-import SectionHeader from "@/components/SectionHeader";
-import ChatInterface from "@/components/ChatInterface";
+import ChatInterface from "./chat/ChatInterface";
 import CurrentWork from "./CurrentWork";
 import IntroHeader from "@/components/IntroHeader";
 
