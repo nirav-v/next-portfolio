@@ -29,7 +29,6 @@ const niravResume = `
 Nirav Venkatesan
 Full Stack Software Engineer
 San Diego, CA 
-Email: niravvenkatesan@gmail.com 
 Linkedin: https://www.linkedin.com/in/nirav-venkatesan  
 Github: https://github.com/nirav-v 
 Portfolio: https://www.niravvenkatesan.com

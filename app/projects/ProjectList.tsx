@@ -22,7 +22,7 @@ const projectsList: ProjectType[] = [
     id: 0,
     title: 'Hardpost',
     desc: 'Social e-commerce platform for skateboarders',
-    img: '/static/projects/hp.png',
+    img: '/static/projects/new_hardpost.png',
     link: 'https://hardpost-f79ecee5b44d.herokuapp.com/',
     github: 'https://github.com/nirav-v/hardpost',
     tags: [
@@ -58,7 +58,7 @@ const projectsList: ProjectType[] = [
 
 export default function Projects() {
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
+    <div className='grid grid-cols-1 gap-8 md:grid-cols-2 items-start'>
       {projectsList.map(item => {
         return <ProjectCard key={item.id} project={item} />;
       })}
