@@ -18,6 +18,11 @@ const updateChatHistory = (user_query: string, modelResponse: string) => {
     },
   ];
 
+  // if history grows past 10, truncate the first query and response from the beginning of the chat history
+  if (updatedHistory.length >= 10) {
+    updatedHistory.splice(0, 2);
+  }
+
   // write the updated history back to local storage
   localStorage.setItem("chat-history", JSON.stringify(updatedHistory));
 
