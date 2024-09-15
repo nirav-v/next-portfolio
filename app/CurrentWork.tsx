@@ -4,7 +4,7 @@ import React from "react";
 function CurrentWork(props: any) {
   return (
     <>
-      <p className="text-2xl lg:text-4xl tracking-tighter mb-5 font-bold">
+      <p className=" text-2xl lg:text-4xl tracking-tighter mb-5 font-bold">
         Currently I'm Working on{" "}
         <Link
           href={"https://www.rentius.ai/"}
