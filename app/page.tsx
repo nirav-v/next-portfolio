@@ -1,3 +1,4 @@
+import ResumeComponent from "@/components/Resume";
 import ChatInterface from "./chat/ChatInterface";
 import CurrentWork from "./CurrentWork";
 import IntroHeader from "@/components/IntroHeader";
@@ -35,6 +36,7 @@ export default function Home() {
         <div className="p-4">
           <ChatInterface />
         </div>
+        <ResumeComponent />
       </div>
     </>
   );
