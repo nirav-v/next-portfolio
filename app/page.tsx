@@ -8,7 +8,7 @@ export default function Home() {
     <>
       {" "}
       <div
-        className="relative w-full pt-10  m-auto flex justify-center text-center flex-col items-center z-1"
+        className="relative w-full m-auto flex justify-center text-center flex-col items-center z-1"
         style={{ maxWidth: "1200px" }}>
         <div className="w-full py-5 p-2 animate-slideInLeft">
           <IntroHeader />

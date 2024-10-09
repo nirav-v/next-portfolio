@@ -43,7 +43,7 @@ export default function Nav() {
     <>
       {/* need to add a mobile navbar to show on sm screens */}
       <div className="block z-100">
-        <nav className="flex items-center justify-between">
+        <nav className="flex items-center justify-between m-auto xl:w-[90%]">
           <Link href={"/"}>
             <Image
               src="/static/icons/dev-profile.svg"
