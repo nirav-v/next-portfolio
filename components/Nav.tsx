@@ -1,23 +1,20 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const routes: {
   title: string;
   path: string;
 }[] = [
   {
-    title: 'Home',
-    path: '/',
+    title: "Projects",
+    path: "/projects",
   },
   {
-    title: 'Projects',
-    path: '/projects',
-  },
-  {
-    title: 'About',
-    path: '/about',
+    title: "About",
+    path: "/about",
   },
 ];
 export default function Nav() {
@@ -29,16 +26,16 @@ export default function Nav() {
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     } else {
       setIsMenuOpen(true);
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     }
   }
 
   useEffect(() => {
     return function cleanup() {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, []);
 
@@ -47,6 +44,14 @@ export default function Nav() {
       {/* need to add a mobile navbar to show on sm screens */}
       <div className="block z-100">
         <nav className="flex items-center justify-between">
+          <Link href={"/"}>
+            <Image
+              src="/static/icons/dev-profile.svg"
+              alt="dev-icon"
+              width={100}
+              height={100}
+            />
+          </Link>
           <li className="list-none font-bold text-lg cursor-pointer"></li>
           <ul className="flex items-center space-x-10">
             {routes.map((item, index) => {
@@ -55,15 +60,15 @@ export default function Nav() {
                   key={index}
                   className={`list-none text-white ${
                     pathname === item.path
-                      ? 'opacity-100'
-                      : 'opacity-40 hover:opacity-100 transition-opacity'
+                      ? "opacity-100"
+                      : "opacity-40 hover:opacity-100 transition-opacity"
                   }`}>
                   <Link href={item.path}>{item.title}</Link>
                 </li>
               );
             })}
           </ul>
-        </nav>{' '}
+        </nav>{" "}
       </div>
       {/* <div className="-m-5 block sm:hidden z-100">
         <nav>
