@@ -14,7 +14,7 @@ export default function Home() {
           <IntroHeader />
         </div>
         <div
-          style={{ animationDelay: "1s" }}
+          // style={{ animationDelay: "1s" }}
           className="p-4 opacity-0 animate-slideInLeft">
           <h1 className=" heroTitle inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-2xl lg:text-4xl tracking-tighter mb-5 font-bold heroShinyBg">
             <span className="block md:inline heroShiny1 text-rose-600">
@@ -29,7 +29,7 @@ export default function Home() {
           </h1>
         </div>
         <div
-          style={{ animationDelay: "2s" }}
+          // style={{ animationDelay: "2s" }}
           className="p-4 opacity-0 animate-slideInLeft ">
           <CurrentWork />
         </div>
