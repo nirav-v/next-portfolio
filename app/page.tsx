@@ -1,7 +1,5 @@
 import ResumeComponent from "@/components/Resume";
 import ChatInterface from "./chat/ChatInterface";
-import CurrentWork from "../components/IntroTextHeader/CurrentWork";
-import HiImNirav from "@/components/HiNirav";
 import IntroTextHeader from "../components/IntroTextHeader";
 
 export default function Home() {
