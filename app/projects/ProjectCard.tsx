@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
       <a
         href={project.link || project.github}
         target="_blank"
-        className={`w-[500px] h-[350px] m-auto relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}>
+        className={` m-auto relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}>
         <Image
           priority
           className="rounded-md w-full h-full object-cover"
