@@ -6,31 +6,28 @@ import ProjectTag from "./ProjectTag";
 export default function ProjectCard({ project }: { project: ProjectType }) {
   return (
     <div className="mx-auto flex flex-col projects-center md:projects-start md:justify-center">
-      <a
+      {/* <a
         href={project.link || project.github}
         target="_blank"
         className={` m-auto relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}>
+        {" "}
+      </a> */}
+      <div className="parent-container relative group">
         <Image
           priority
-          className="rounded-md w-full h-full object-cover"
+          className="m-auto relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 group-hover:opacity-25 group-hover:border-fun-pink will-change-projectCard  w-full h-full object-cover"
           width={500}
           height={500}
           src={project.img}
           alt={`${project.title} landing page image`}
         />
-        {/* <div
-          className="rounded-md"
-          style={{
-            backgroundImage: `url(${project.img})`,
-            backgroundSize: "contain",
-          }}></div> */}
-      </a>
-      <div className="w-full mt-5">
-        <div className="flex projects-center justify-between">
-          <a href={project.link || project.github} target="_blank">
-            <h3 className="text-lg font-bold">{project.title}</h3>
-          </a>
-          <div className="space-x-2">
+
+        <div className="absolute top-10 hidden group-hover:block w-full mt-5 ">
+          <div className="flex justify-between items-center w-1/4 m-auto">
+            <a href={project.link || project.github} target="_blank">
+              <h3 className="text-lg font-bold">{project.title}</h3>
+            </a>
+            {/* <div className="flex justify-between items-center mx-2 px-8"> */}
             {project.link && (
               <a href={project.link} target="_blank" rel="noreferrer">
                 <Image
@@ -51,14 +48,15 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
                 />
               </a>
             )}
+            {/* </div> */}
           </div>
+          <p className="text-center text-fun-gray text-lg">{project.desc}</p>
+          <ul className="flex flex-wrap justify-center items-center p-8 mt-2 -ml-2 list-none">
+            {project.tags.map(tag => {
+              return <ProjectTag key={tag.name} tag={tag} />;
+            })}
+          </ul>
         </div>
-        <p className="text-fun-gray text-left text-lg">{project.desc}</p>
-        <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
-          {project.tags.map(tag => {
-            return <ProjectTag key={tag.name} tag={tag} />;
-          })}
-        </ul>
       </div>
     </div>
   );

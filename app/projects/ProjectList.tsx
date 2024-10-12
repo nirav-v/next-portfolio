@@ -21,9 +21,9 @@ const projectsList: ProjectType[] = [
   {
     id: 0,
     title: "Hardpost",
-    desc: "Social e-commerce platform for skateboarders",
+    desc: "Crowdsourced e-commerce platform for skateboarders",
     img: "/static/projects/new_hardpost.png",
-    link: "https://hardpost-f79ecee5b44d.herokuapp.com/",
+    link: "https://www.hardpost-shop.com/",
     github: "https://github.com/nirav-v/hardpost",
     tags: [
       { name: "React", icon: <SiVite /> },
