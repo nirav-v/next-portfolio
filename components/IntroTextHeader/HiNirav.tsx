@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function IntroHeader() {
+function HiImNirav() {
   const colors = [
     "#FF5733",
     "#33FF57",
@@ -38,4 +38,4 @@ function IntroHeader() {
   );
 }
 
-export default IntroHeader;
+export default HiImNirav;
