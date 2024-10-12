@@ -50,6 +50,7 @@ export default function ChatInterface() {
     })
       .then(res => {
         setLoading(false);
+        setUserQuery("");
         return res.json();
       })
       .then(data => {
