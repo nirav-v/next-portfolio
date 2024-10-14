@@ -6,7 +6,7 @@ const caveat = Caveat({
 });
 export default function SectionHeader({ title }: { title: string }) {
   return (
-    <div className="md:border-t-2 border-white w-full pt-5">
+    <div className="md:border-t-2 text-white border-white w-full pt-5">
       <h2
         className={
           caveat.className +
