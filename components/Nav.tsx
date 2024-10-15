@@ -42,7 +42,7 @@ export default function Nav() {
   return (
     <>
       {/* need to add a mobile navbar to show on sm screens */}
-      <div className="block z-100">
+      <div className="top-0 p-5 block bg-black z-30 bg-gradient-to-b from-gray-900 via-sky-500/50 to-gray-900">
         <nav className="flex items-center justify-between m-auto xl:w-[90%]">
           <Link href={"/"}>
             <Image
@@ -59,10 +59,10 @@ export default function Nav() {
               return (
                 <li
                   key={index}
-                  className={`list-none text-white ${
+                  className={`list-none text-white text-xl ${
                     pathname === item.path
-                      ? "opacity-100"
-                      : "opacity-40 hover:opacity-100 transition-opacity"
+                      ? "opacity-100 font-bold"
+                      : "opacity-80 hover:opacity-100 transition-opacity"
                   }`}>
                   <Link href={item.path}>{item.title}</Link>
                 </li>

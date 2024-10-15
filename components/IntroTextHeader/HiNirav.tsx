@@ -12,8 +12,8 @@ function HiImNirav() {
   ];
   return (
     <>
-      <p className=" text-2xl rounded-full font-bold ">
-        {"Hi, I'm "}
+      <p className="rounded-full font-bold ">
+        {"Hi! I'm "}
         {Array.from("Nirav").map((char, index) => {
           // Check if the character is a space and preserve it
           if (char === " ") {

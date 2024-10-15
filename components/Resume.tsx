@@ -37,7 +37,7 @@ const workExperiences = [
 
 const ResumeComponent = () => {
   return (
-    <div className="flex flex-col items-center text-white p-6">
+    <div id="resume" className=" flex flex-col items-center text-white p-6">
       {workExperiences.map((experience, index) => (
         <div key={index} className="relative w-full max-w-3xl group">
           {/* vertical line left */}
