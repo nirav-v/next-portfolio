@@ -1,6 +1,7 @@
 import React from "react";
 import CurrentWork from "./CurrentWork";
 import HiImNirav from "./HiNirav";
+import { wrap } from "module";
 
 function IntroTextHeader() {
   return (
@@ -17,8 +18,7 @@ function IntroTextHeader() {
           </span>{" "}
           {/* and 
           <span className="heroShiny2 text-slate-600">Skateboarder</span>{" "} */}
-          based in{" "}
-          <span className="block md:inline text-nowrap">San Diego, CA</span>
+          based in <span className="whitespace-nowrap">San Diego, CA</span>
         </h1>
       </div>
       <div

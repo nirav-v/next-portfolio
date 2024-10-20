@@ -46,8 +46,9 @@ export default function Nav() {
         <nav className="flex items-center justify-between m-auto xl:w-[90%]">
           <Link href={"/"}>
             <Image
+              className="rounded-full border-2 border-black absolute top-4 z-10"
               priority
-              src="/static/icons/dev-profile.svg"
+              src="/headshot.png"
               alt="dev-icon"
               width={100}
               height={100}
