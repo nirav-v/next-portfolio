@@ -48,7 +48,6 @@ export default function Home() {
           <ChatInterface />
         </div>
         <div>
-          <h2 className="m-auto text-2xl p-4">My Journey</h2>
           <ResumeComponent />
         </div>
       </div>

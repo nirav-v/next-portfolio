@@ -38,6 +38,8 @@ const workExperiences = [
 const ResumeComponent = () => {
   return (
     <div id="resume" className=" flex flex-col items-center text-white p-6">
+      <h2 className="m-auto text-2xl p-4 py-8 font-bold">My Journey</h2>
+
       {workExperiences.map((experience, index) => (
         <div
           key={index}
@@ -48,7 +50,7 @@ const ResumeComponent = () => {
           <div
             className={`absolute group-hover:hidden -top-3 -left-2 transform group-hover:-translate-x-1/2 w-6 h-6 rounded-full bg-black z-20 border-4 transition-all`}></div>
           {/* Content */}
-          <div className="content group-hover:text-orange-500 relative flex flex-col items-start p-8 pl-12 border-l-4 group-hover:border-hidden transition-all transform group-hover:scale-105 group-hover:shadow-lg group-hover:-translate-x-6">
+          <div className="content group-hover:text-white relative flex flex-col items-start p-8 pl-12 border-y-2 border-x-4 group-hover:border-hidden transition-all transform group-hover:scale-105 group-hover:shadow-lg group-hover:-translate-x-2">
             <div className="title-date text-left">
               <h3 className="text-lg font-bold">{experience.title}</h3>
               <p className="text-sm italic">
