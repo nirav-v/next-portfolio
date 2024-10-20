@@ -39,15 +39,16 @@ const ResumeComponent = () => {
   return (
     <div id="resume" className=" flex flex-col items-center text-white p-6">
       {workExperiences.map((experience, index) => (
-        <div key={index} className="relative w-full max-w-3xl group">
+        <div
+          key={index}
+          className="relative w-full max-w-3xl group transition-all">
           {/* vertical line left */}
-          <div className="absolute top-0 left-0 transform -translate-x-1/2 w-px h-full bg-gray-400 transition-all group-hover:bg-orange-500"></div>
+          {/* <div className="absolute top-0 left-0 transform -translate-x-1/2 w-px h-full bg-gray-400 transition-all group-hover:bg-orange-500 "></div> */}
           {/* circle  */}
           <div
-            className={`absolute -top-3  transform -translate-x-1/2 w-6 h-6 rounded-full bg-black z-20 border-4 border-white transition-all group-hover:border-orange-500 `}></div>
-
+            className={`absolute group-hover:hidden -top-3 -left-2 transform group-hover:-translate-x-1/2 w-6 h-6 rounded-full bg-black z-20 border-4 transition-all`}></div>
           {/* Content */}
-          <div className="content  group-hover:text-orange-500 relative flex flex-col items-start p-8 pl-12 border-l-4transition-transform transform group-hover:scale-105 group-hover:shadow-lg  ">
+          <div className="content group-hover:text-orange-500 relative flex flex-col items-start p-8 pl-12 border-l-4 group-hover:border-hidden transition-all transform group-hover:scale-105 group-hover:shadow-lg group-hover:-translate-x-6">
             <div className="title-date text-left">
               <h3 className="text-lg font-bold">{experience.title}</h3>
               <p className="text-sm italic">
