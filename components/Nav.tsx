@@ -48,6 +48,7 @@ export default function Nav() {
             <Image
               className="rounded-full border-2 border-black absolute top-4 z-10"
               priority
+              loading="eager"
               src="/headshot.png"
               alt="dev-icon"
               width={150}
