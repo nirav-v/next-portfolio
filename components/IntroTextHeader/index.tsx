@@ -1,7 +1,6 @@
 import React from "react";
 import CurrentWork from "./CurrentWork";
 import HiImNirav from "./HiNirav";
-import { wrap } from "module";
 
 function IntroTextHeader() {
   return (

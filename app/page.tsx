@@ -9,22 +9,22 @@ export default function Home() {
     <div className="animate-slideInLeft">
       {" "}
       <div className="top-0 relative z-0 w-full h-auto pb-4 ">
-        <div className="intro-text text-center md:text-left md:w-2/3 pl-12 static md:absolute top-0">
+        <div className="intro-text text-center lg:text-left lg:w-2/3 pl-12 static lg:absolute top-0">
           {/* text */}
           <div className="pt-12">
             <IntroTextHeader />
           </div>
           {/* btn links */}
-          <div className="flex flex-col mt-12 md:items-start ">
+          <div className="flex flex-col mt-12 items-center lg:items-start ">
             <Link
               href={"#resume"}
-              className="btn btn-outline btn-primary uppercase my-4 md:w-2/3">
+              className="btn btn-outline btn-primary uppercase my-4 w-2/3">
               My Journey
             </Link>
 
             <Link
               href={"/projects"}
-              className="btn btn-outline btn-primary uppercase my-4 md:w-2/3">
+              className="btn btn-outline btn-primary uppercase my-4 w-2/3">
               Projects
             </Link>
           </div>

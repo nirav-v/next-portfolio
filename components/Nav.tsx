@@ -60,15 +60,39 @@ export default function Nav() {
               return (
                 <li
                   key={index}
-                  className={`list-none text-white text-xl ${
+                  className={`list-none text-white text-2xl ${
                     pathname === item.path
                       ? "opacity-100 font-bold"
-                      : "opacity-80 hover:opacity-100 transition-opacity"
+                      : "opacity-95 hover:opacity-100 transition-opacity"
                   }`}>
                   <Link href={item.path}>{item.title}</Link>
                 </li>
               );
             })}
+          </ul>
+          <ul className="flex items-center space-x-10">
+            <li>
+              <a href="https://github.com/nirav-v" target="__blank">
+                <Image
+                  src={"/static/logos/github-logo.png"}
+                  alt="github"
+                  width={75}
+                  height={75}
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nirav-venkatesan/"
+                target="__blank">
+                <Image
+                  src={"/static/logos/linkedin-logo.png"}
+                  alt="linkedin"
+                  width={30}
+                  height={30}
+                />
+              </a>
+            </li>
           </ul>
         </nav>{" "}
       </div>
