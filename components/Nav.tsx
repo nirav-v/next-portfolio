@@ -50,8 +50,8 @@ export default function Nav() {
               priority
               src="/headshot.png"
               alt="dev-icon"
-              width={100}
-              height={100}
+              width={150}
+              height={150}
             />
           </Link>
           <ul className="flex items-center space-x-10 ml-auto">

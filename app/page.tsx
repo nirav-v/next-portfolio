@@ -11,7 +11,7 @@ export default function Home() {
       <div className="top-0 relative z-0 w-full h-auto pb-4 ">
         <div className="intro-text text-center xl:text-left xl:w-2/3 pl-12 static xl:absolute top-0">
           {/* text */}
-          <div className="pt-12">
+          <div className="pt-20">
             <IntroTextHeader />
           </div>
           {/* btn links */}
