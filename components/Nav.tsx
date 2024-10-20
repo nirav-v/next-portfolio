@@ -43,7 +43,7 @@ export default function Nav() {
     <>
       {/* need to add a mobile navbar to show on sm screens */}
       <div className="top-0 p-5 block bg-black z-30 bg-gradient-to-b from-gray-900 via-sky-500/50 to-gray-900">
-        <nav className="flex items-center justify-between m-auto xl:w-[90%]">
+        <nav className="flex items-center justify-between m-auto xl:w-[90%] py-6 lg:py-1">
           <Link href={"/"}>
             <Image
               className="rounded-full border-2 border-black absolute top-4 z-10"
@@ -54,8 +54,7 @@ export default function Nav() {
               height={100}
             />
           </Link>
-          <li className="list-none font-bold text-lg cursor-pointer"></li>
-          <ul className="flex items-center space-x-10">
+          <ul className="flex items-center space-x-10 ml-auto">
             {routes.map((item, index) => {
               return (
                 <li
@@ -70,7 +69,7 @@ export default function Nav() {
               );
             })}
           </ul>
-          <ul className="flex items-center space-x-10">
+          <ul className="flex items-center space-x-10 mx-10">
             <li>
               <a href="https://github.com/nirav-v" target="__blank">
                 <Image
