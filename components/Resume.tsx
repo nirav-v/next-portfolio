@@ -48,9 +48,9 @@ const ResumeComponent = () => {
           {/* <div className="absolute top-0 left-0 transform -translate-x-1/2 w-px h-full bg-gray-400 transition-all group-hover:bg-orange-500 "></div> */}
           {/* circle  */}
           <div
-            className={`absolute group-hover:hidden -top-3 -left-2 transform group-hover:-translate-x-1/2 w-6 h-6 rounded-full bg-black z-20 border-4 transition-all`}></div>
+            className={`absolute -top-3 -left-2 transform group-hover:-translate-x-1/2 w-6 h-6 rounded-full bg-black z-20 border-4 transition-all`}></div>
           {/* Content */}
-          <div className="content group-hover:text-white relative flex flex-col items-start p-8 pl-12 border-y-2 border-x-4 group-hover:border-hidden transition-all transform group-hover:scale-105 group-hover:shadow-lg group-hover:-translate-x-2">
+          <div className="content group-hover:text-white relative flex flex-col items-start p-8 pl-12 border-y-2 border-x-4 transition-all transform g group-hover:shadow-lg group-hover:-translate-x-5">
             <div className="title-date text-left">
               <h3 className="text-lg font-bold">{experience.title}</h3>
               <p className="text-sm italic">

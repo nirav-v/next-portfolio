@@ -33,7 +33,7 @@ export default function Home() {
           <Image
             priority
             unoptimized={true}
-            className="animation-none w-full image-mask shadow-inner"
+            className="animation-none w-full image-mask shadow-inner hidden xl:block"
             src={"/ImNiravHero.png"}
             width={500}
             height={200}

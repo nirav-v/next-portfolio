@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import MobileNav from "./MobileNav";
 
 const routes: {
   title: string;
@@ -41,8 +42,9 @@ export default function Nav() {
 
   return (
     <>
+      {" "}
       {/* need to add a mobile navbar to show on sm screens */}
-      <div className="top-0 p-5 block bg-black z-30 bg-gradient-to-b from-gray-900 via-sky-500/50 to-gray-900">
+      <div className="top-0 p-5 bg-black z-30 bg-gradient-to-b from-gray-900 via-sky-500/50 to-gray-900">
         <nav className="flex items-center justify-between m-auto xl:w-[90%] py-6 lg:py-1">
           <Link href={"/"}>
             <Image
@@ -55,7 +57,9 @@ export default function Nav() {
               height={150}
             />
           </Link>
-          <ul className="flex items-center space-x-10 ml-auto">
+          <MobileNav />
+
+          <ul className="hidden sm:flex items-center space-x-10 ml-auto">
             {routes.map((item, index) => {
               return (
                 <li
@@ -70,7 +74,7 @@ export default function Nav() {
               );
             })}
           </ul>
-          <ul className="flex items-center space-x-10 mx-10">
+          <ul className="hidden sm:flex items-center space-x-10 mx-10">
             <li>
               <a href="https://github.com/nirav-v" target="__blank">
                 <Image
@@ -96,48 +100,6 @@ export default function Nav() {
           </ul>
         </nav>{" "}
       </div>
-      {/* <div className="-m-5 block sm:hidden z-100">
-        <nav>
-          <div
-            className={`w-full justify-between flex items-center ${"bg-bg"} p-5`}
-            style={{ zIndex: 101 }}>
-            <li className="list-none font-bold text-lg">
-              <Link href="/">
-                <img
-                  className="mr-3"
-                  src="/static/logos/logo_full.svg"
-                  width="160"
-                />
-              </Link>
-            </li>
-            <button
-              className="burger visible md:hidden"
-              aria-label="Toggle menu"
-              type="button"
-              onClick={toggleMenu}>
-              <MenuIcon data-hide={isMenuOpen} />
-              <CrossIcon data-hide={!isMenuOpen} />
-            </button>
-          </div>
-          {
-            <ul
-              className={`menu flex flex-col absolute bg-bg
-            ${"menuRendered"}`}>
-              {routes.map((item, index) => {
-                return (
-                  <li
-                    className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
-                    style={{ transitionDelay: `${150 + index * 25}ms` }}>
-                    <Link className="flex w-auto pb-4" href={item.path}>
-                      {item.title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          }
-        </nav>
-      </div> */}
     </>
   );
 }
