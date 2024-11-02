@@ -38,32 +38,32 @@ const workExperiences = [
   },
 ];
 
-const ResumeDrawer = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+// const ResumeDrawer = () => {
+//   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  return (
-    <>
-      <Link
-        href={""}
-        className="btn btn-outline btn-primary uppercase my-4 w-2/3"
-        onClick={() => setDrawerOpen(!drawerOpen)}>
-        My Journey
-      </Link>
-      {drawerOpen ? <ResumeComponent /> : null}
-    </>
-  );
-};
+//   return (
+//     <>
+//       <Link
+//         href={""}
+//         className="btn btn-outline btn-primary uppercase my-4 w-2/3"
+//         onClick={() => setDrawerOpen(!drawerOpen)}>
+//         My Journey
+//       </Link>
+//       {drawerOpen ? <ResumeComponent /> : null}
+//     </>
+//   );
+// };
 
-const ResumeComponent = () => {
+const ResumeComponent = ({ drawerOpen }: { drawerOpen: boolean }) => {
   return (
     <>
       <div
         id="resume"
-        className="resume-drawer flex flex-col items-center text-white p-6 z-50">
+        className={`resume-drawer ${
+          drawerOpen ? "open" : "closed"
+        } fixed h-screen top-0 right-0 bg-black w-full md:w-1/2 flex flex-col items-center justify-center text-white p-6 z-50`}>
         {workExperiences.map((experience, index) => (
-          <div
-            key={index}
-            className="relative w-full max-w-3xl group transition-all">
+          <div key={index} className="relative w-full  group transition-all">
             {/* vertical line left */}
             {/* <div className="absolute top-0 left-0 transform -translate-x-1/2 w-px h-full bg-gray-400 transition-all group-hover:bg-orange-500 "></div> */}
             {/* circle  */}
@@ -90,4 +90,4 @@ const ResumeComponent = () => {
   );
 };
 
-export default ResumeDrawer;
+export default ResumeComponent;
