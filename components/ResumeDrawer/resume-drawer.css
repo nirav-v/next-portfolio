@@ -1,0 +1,9 @@
+.resume-drawer {
+  width: 70%;
+  height: 100vh;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: black;
+}

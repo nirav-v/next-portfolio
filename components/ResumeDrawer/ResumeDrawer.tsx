@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import "./resume-drawer.css";
+import Link from "next/link";
+import React, { useState } from "react";
 
 const workExperiences = [
   {
@@ -35,38 +38,56 @@ const workExperiences = [
   },
 ];
 
-const ResumeComponent = () => {
-  return (
-    <div id="resume" className=" flex flex-col items-center text-white p-6">
-      <h2 className="m-auto text-2xl p-4 py-8 font-bold">My Journey</h2>
+const ResumeDrawer = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-      {workExperiences.map((experience, index) => (
-        <div
-          key={index}
-          className="relative w-full max-w-3xl group transition-all">
-          {/* vertical line left */}
-          {/* <div className="absolute top-0 left-0 transform -translate-x-1/2 w-px h-full bg-gray-400 transition-all group-hover:bg-orange-500 "></div> */}
-          {/* circle  */}
-          <div
-            className={`absolute -top-3 -left-2 transform group-hover:-translate-x-1/2 w-6 h-6 rounded-full bg-black z-20 border-4 transition-all`}></div>
-          {/* Content */}
-          <div className="content group-hover:text-white relative flex flex-col items-start p-8 pl-12 border-y-2 border-x-4 transition-all transform g group-hover:shadow-lg group-hover:-translate-x-5">
-            <div className="title-date text-left">
-              <h3 className="text-lg font-bold">{experience.title}</h3>
-              <p className="text-sm italic">
-                {experience.date} | {experience.location}
-              </p>
-            </div>
-            <ul className="mt-3 text-left list-disc">
-              {experience.points.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))}
-    </div>
+  return (
+    <>
+      <Link
+        href={""}
+        className="btn btn-outline btn-primary uppercase my-4 w-2/3"
+        onClick={() => setDrawerOpen(!drawerOpen)}>
+        My Journey
+      </Link>
+      {drawerOpen ? <ResumeComponent /> : null}
+    </>
   );
 };
 
-export default ResumeComponent;
+const ResumeComponent = () => {
+  return (
+    <>
+      <div
+        id="resume"
+        className="resume-drawer flex flex-col items-center text-white p-6 z-50">
+        {workExperiences.map((experience, index) => (
+          <div
+            key={index}
+            className="relative w-full max-w-3xl group transition-all">
+            {/* vertical line left */}
+            {/* <div className="absolute top-0 left-0 transform -translate-x-1/2 w-px h-full bg-gray-400 transition-all group-hover:bg-orange-500 "></div> */}
+            {/* circle  */}
+            <div
+              className={`absolute -top-3 -left-2 transform group-hover:-translate-x-1/2 w-6 h-6 rounded-full bg-black z-20 border-4 transition-all`}></div>
+            {/* Content */}
+            <div className=" group-hover:text-white relative flex flex-col items-start p-8 pl-12 border-y-2 border-x-4 transition-all transform g group-hover:shadow-lg group-hover:-translate-x-5">
+              <div className="title-date text-left">
+                <h3 className="text-lg font-bold">{experience.title}</h3>
+                <p className="text-sm italic">
+                  {experience.date} | {experience.location}
+                </p>
+              </div>
+              <ul className="mt-3 text-left text-sm list-disc">
+                {experience.points.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default ResumeDrawer;
