@@ -44,9 +44,8 @@ export default function Home() {
       <div
         className="relative w-full m-auto flex justify-center text-center flex-col items-center z-1"
         style={{ maxWidth: "1200px" }}>
-        <div className="p-4">
-          <ChatInterface />
-        </div>
+        <ChatInterface />
+
         <div>
           <ResumeComponent />
         </div>

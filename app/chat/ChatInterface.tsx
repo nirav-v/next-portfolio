@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import "./chat.css";
 
 /** This function is responsible for updating the chat history in localStorage */
 const updateChatHistory = (user_query: string, modelResponse: string) => {
@@ -61,14 +62,14 @@ export default function ChatInterface() {
   };
 
   return (
-    <div className="my-5">
+    <div className="my-5 w-full">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           onChange={e => setUserQuery(e.target.value)}
           value={userQuery}
           placeholder="Chat with Nirav: Ask me anything..."
-          className="input input-bordered w-96 p-4 rounded-lg"
+          className="chat-input input input-bordered w-96 p-4 rounded-lg"
         />
       </form>
       {(modelResponse || loading) && (
