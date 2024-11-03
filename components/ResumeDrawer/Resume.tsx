@@ -1,7 +1,6 @@
 "use client";
 import "./resume-drawer.css";
-import Link from "next/link";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 const workExperiences = [
   {
@@ -54,14 +53,64 @@ const workExperiences = [
 //   );
 // };
 
-const ResumeComponent = ({ drawerOpen }: { drawerOpen: boolean }) => {
+const ResumeComponent = ({
+  drawerOpen,
+  setDrawerOpen,
+}: {
+  drawerOpen: boolean;
+  setDrawerOpen: Dispatch<SetStateAction<boolean>>;
+}) => {
+  // close drawer when click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target;
+
+      // Prevent Errors, Check if the target is actually an HTMLElement before accessing classList
+      if (target && target instanceof HTMLElement && target.classList) {
+        console.log(target.classList);
+
+        // Check if the click is outside the drawer
+        if (!target.closest(".resume-drawer") && drawerOpen) {
+          setDrawerOpen(false); // Close the drawer if clicked outside
+        }
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [drawerOpen, setDrawerOpen]);
+
   return (
     <>
+      {/* close btn */}
+
       <div
         id="resume"
         className={`resume-drawer ${
           drawerOpen ? "open" : "closed"
-        } fixed h-screen top-0 right-0 bg-black w-full md:w-1/2 flex flex-col items-center justify-center text-white p-6 z-50`}>
+        } fixed lg:h-screen top-0 right-0 bg-black w-full lg:w-1/2 flex flex-col items-center justify-center text-white p-6 z-50`}>
+        <div className="w-full flex justify-end">
+          <button
+            className="btn btn-square btn-outline m-2"
+            onClick={() => setDrawerOpen(!drawerOpen)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
         {workExperiences.map((experience, index) => (
           <div key={index} className="relative w-full  group transition-all">
             {/* vertical line left */}

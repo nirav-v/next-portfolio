@@ -53,7 +53,7 @@ export default function Home() {
           <ChatInterface />
         </div>
       </div>
-      <ResumeComponent drawerOpen={drawerOpen} />
+      <ResumeComponent drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
       {/* <ResumeDrawer /> */}
     </>
   );
