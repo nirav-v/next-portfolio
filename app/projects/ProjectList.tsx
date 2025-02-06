@@ -1,39 +1,33 @@
-import { ProjectType } from "@/types/ProjectType";
-import ProjectCard from "./ProjectCard";
+import { ProjectType } from '@/types/ProjectType';
+import ProjectCard from './ProjectCard';
 import {
-  SiAmazonaws,
-  SiApollographql,
+  SiAmazon,
   SiChakraui,
-  SiGraphql,
-  SiJavascript,
-  SiMapbox,
-  SiMongoose,
-  SiMui,
   SiSequelize,
   SiStripe,
   SiVite,
-} from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
+} from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
+import { SiExpress } from 'react-icons/si';
+import { GrMysql } from 'react-icons/gr';
 
 const projectsList: ProjectType[] = [
   {
     id: 0,
-    title: "Hardpost",
-    desc: "Crowdsourced e-commerce platform for skateboarders",
-    img: "/static/projects/new_hardpost.png",
-    link: "https://www.hardpost-shop.com/",
-    github: "https://github.com/nirav-v/hardpost",
+    title: 'Hardpost',
+    desc: 'Crowdsourced e-commerce platform for skateboarders',
+    img: '/static/projects/new_hardpost.png',
+    link: 'https://www.hardpost-shop.com/',
+    github: 'https://github.com/nirav-v/hardpost',
     tags: [
-      { name: "React", icon: <SiVite /> },
-      { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "Express", icon: <SiExpress /> },
-      { name: "MySQL", icon: <GrMysql /> },
-      { name: "AWS", icon: <SiAmazonaws /> },
-      { name: "Sequelize", icon: <SiSequelize /> },
-      { name: "Stripe", icon: <SiStripe /> },
-      { name: "Chakra UI", icon: <SiChakraui /> },
+      { name: 'React', icon: <SiVite /> },
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'Express', icon: <SiExpress /> },
+      { name: 'MySQL', icon: <GrMysql /> },
+      { name: 'AWS', icon: <SiAmazon /> },
+      { name: 'Sequelize', icon: <SiSequelize /> },
+      { name: 'Stripe', icon: <SiStripe /> },
+      { name: 'Chakra UI', icon: <SiChakraui /> },
     ],
   },
   // {
@@ -58,7 +52,7 @@ const projectsList: ProjectType[] = [
 
 export default function Projects() {
   return (
-    <div className="grid grid-cols-1 gap-8 items-start">
+    <div className='grid grid-cols-1 gap-8 items-start'>
       {projectsList.map(item => {
         return <ProjectCard key={item.id} project={item} />;
       })}
