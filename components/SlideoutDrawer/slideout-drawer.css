@@ -1,4 +1,4 @@
-.resume-drawer {
+.slideout-drawer {
   transition: all 900ms;
 
   transform: translateX(100%);
