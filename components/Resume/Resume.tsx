@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Markdown from 'react-markdown';
 
 const workExperiences = [
   {
@@ -8,7 +9,7 @@ const workExperiences = [
     location: 'San Diego, CA',
     points: [
       "Rebuilt the Symphony Partners' website using Next.js and TypeScript, enhancing UI, improving DevEx, and optimizing performance with modern React and server components.",
-      `Developed an AI-powered chatbot for Rentius.ai using OpenAI’s API and the MERN stack, employing advanced techniques such as function calling, structured outputs, and response streaming to automate legal notice autofill, integrate with proprietary APIs, and manage database synchronization with AWS S3 and MongoDB.`,
+      `Developed an AI-powered chatbot for **[Rentius.ai](https://rentius.ai/)** using OpenAI’s API and the MERN stack—employing advanced techniques such as function calling, structured outputs, and response streaming to automate legal notice autofill, integrate with proprietary APIs, and manage database synchronization with AWS S3 and MongoDB.`,
       'Designed and customized Shopify themes, creating responsive pages aligned with performance metrics and implementing business logic to support client-specific IT needs.',
     ],
     dotColor: 'bg-white', // default dot color
@@ -60,7 +61,9 @@ const Resume = () => {
             </div>
             <ul className='mt-3 text-left text-sm list-disc'>
               {experience.points.map((point, idx) => (
-                <li key={idx}>{point}</li>
+                <li className='py-2' key={idx}>
+                  <Markdown>{point}</Markdown>
+                </li>
               ))}
             </ul>
           </div>
