@@ -7,15 +7,15 @@ const workExperiences = [
     date: 'May 2024 - Present',
     location: 'San Diego, CA',
     points: [
-      "Core developer on Rentius.ai, an online renters' portal built on the MERN stack. Spearheading technical implementation of complex business logic for all landlord-tenant interactions.",
-      "Developed the new Symphony Partners' website using Next.js and TypeScript, streamlining UI, improving DevEx, and enhancing performance with modern React and server components.",
-      'Developed Shopify themes for multiple clients, creating custom pages from scratch while boosting Google page-speed scores and customer conversion rates.',
-      'Honed expertise in meticulously crafting responsive pages aligned with Figma wireframes.',
+      "Rebuilt the Symphony Partners' website using Next.js and TypeScript, enhancing UI, improving DevEx, and optimizing performance with modern React and server components.",
+      `Developed an AI-powered chatbot for Rentius.ai using OpenAI’s API and the MERN stack, employing advanced techniques such as function calling, structured outputs, and response streaming to automate legal notice autofill, integrate with proprietary APIs, and manage database synchronization with AWS S3 and MongoDB.`,
+      'Designed and customized Shopify themes, creating responsive pages aligned with performance metrics and implementing business logic to support client-specific IT needs.',
     ],
     dotColor: 'bg-white', // default dot color
   },
   {
     title: 'Software Engineer @SeekEats',
+    employmentType: 'Internship',
     date: 'October 2023 - May 2024',
     location: 'San Diego, CA',
     points: [
@@ -25,12 +25,13 @@ const workExperiences = [
     dotColor: 'bg-white', // default dot color
   },
   {
-    title: 'Web Development Instructional Specialist @2U',
+    title: 'Web Development Instructional Specialist @2U, ',
+    employmentType: 'Contract',
     date: 'December 2022 - March 2024',
     location: 'San Diego, CA',
     points: [
-      'Provide personalized guidance to students, offering one-on-one assistance facilitating comprehension of HTML, CSS, JavaScript, Node.js, React, SQL, NoSQL, Git, and Devops.',
-      'Promote best practices of Git version control, test-driven development, and Agile methodologies to help design and deploy scalable apps.',
+      'Mentored students in web development, offering personalized guidance on HTML, CSS, JavaScript, Node.js, React, SQL, NoSQL, Git, and DevOps.',
+      'Promoted best practices, including version control with Git, test-driven development, and Agile methodologies, enabling students to design and deploy scalable applications.',
     ],
     dotColor: 'bg-white', // default dot color
   },
@@ -50,6 +51,9 @@ const Resume = () => {
           <div className=' group-hover:text-white relative flex flex-col items-start p-8 pl-12 transition-all transform g group-hover:shadow-lg '>
             <div className='title-date text-left'>
               <h3 className='text-lg font-bold'>{experience.title}</h3>
+              <p className='text-sm italic'>
+                {experience.employmentType || null}
+              </p>
               <p className='text-sm italic'>
                 {experience.date} | {experience.location}
               </p>
