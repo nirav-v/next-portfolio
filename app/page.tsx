@@ -10,7 +10,7 @@ import SlideoutDrawer from '../components/SlideoutDrawer/SlideoutDrawer';
 import Projects from './projects/ProjectList';
 
 export default function Home() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [journeyOpen, setJourneyOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
 
   return (
@@ -27,7 +27,7 @@ export default function Home() {
             <div className='flex flex-col mt-12 items-center xl:items-start relative z-1'>
               <ButtonLink
                 label='My Journey'
-                onClick={() => setDrawerOpen(!drawerOpen)}
+                onClick={() => setJourneyOpen(!journeyOpen)}
               />
               <ButtonLink
                 label='My Projects'
@@ -54,7 +54,7 @@ export default function Home() {
           <ChatInterface />
         </div>
       </div>
-      <SlideoutDrawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen}>
+      <SlideoutDrawer drawerOpen={journeyOpen} setDrawerOpen={setJourneyOpen}>
         <Resume />
       </SlideoutDrawer>
 

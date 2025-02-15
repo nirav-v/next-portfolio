@@ -10,6 +10,7 @@ import {
 import { FaNodeJs } from 'react-icons/fa';
 import { SiExpress } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
+import CurrentWork from '../../components/IntroTextHeader/CurrentWork';
 
 const projectsList: ProjectType[] = [
   {
@@ -53,6 +54,11 @@ const projectsList: ProjectType[] = [
 export default function Projects() {
   return (
     <div className='grid grid-cols-1 gap-8 items-start'>
+      <CurrentWork />
+      <p className='sm:text-xl'>
+        Prior to my current role, I refined my skills through one main project:
+        "Hardpost"—an online marketplace for skateboarders.
+      </p>
       {projectsList.map(item => {
         return <ProjectCard key={item.id} project={item} />;
       })}
