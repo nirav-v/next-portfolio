@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Nav />
-        <main className='w-full flex-1 text-center'>
+        <main className='w-full text-center'>
           <div className='hidden sm:block z-100'></div>
           {children}
         </main>
