@@ -7,9 +7,11 @@ import { useState } from 'react';
 import Resume from '@/components/Resume/Resume';
 import ButtonLink from '../components/buttons/ButtonLink';
 import SlideoutDrawer from '../components/SlideoutDrawer/SlideoutDrawer';
+import Projects from './projects/ProjectList';
 
 export default function Home() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [projectsOpen, setProjectsOpen] = useState(false);
 
   return (
     <>
@@ -27,7 +29,10 @@ export default function Home() {
                 label='My Journey'
                 onClick={() => setDrawerOpen(!drawerOpen)}
               />
-              <ButtonLink label='My Projects' href='/projects' />
+              <ButtonLink
+                label='My Projects'
+                onClick={() => setProjectsOpen(!projectsOpen)}
+              />
             </div>
           </div>
 
@@ -50,8 +55,11 @@ export default function Home() {
         </div>
       </div>
       <SlideoutDrawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen}>
-        <></>
         <Resume />
+      </SlideoutDrawer>
+
+      <SlideoutDrawer drawerOpen={projectsOpen} setDrawerOpen={setProjectsOpen}>
+        <Projects />
       </SlideoutDrawer>
     </>
   );
