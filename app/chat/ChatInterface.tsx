@@ -1,10 +1,10 @@
-"use client";
-import React, { useState } from "react";
-import "./chat.css";
+'use client';
+import React, { useState } from 'react';
+import './chat.css';
 
 /** This function is responsible for updating the chat history in localStorage */
 const updateChatHistory = (user_query: string, modelResponse: string) => {
-  const historyString = localStorage.getItem("chat-history");
+  const historyString = localStorage.getItem('chat-history');
 
   // parse the local storage history to array, if null default to empty arr
   const history = historyString ? JSON.parse(historyString) : [];
@@ -12,9 +12,9 @@ const updateChatHistory = (user_query: string, modelResponse: string) => {
   // add the user query and the response received to the chat history
   const updatedHistory = [
     ...history,
-    { role: "user", content: user_query },
+    { role: 'user', content: user_query },
     {
-      role: "assistant",
+      role: 'assistant',
       content: modelResponse,
     },
   ];
@@ -25,33 +25,33 @@ const updateChatHistory = (user_query: string, modelResponse: string) => {
   }
 
   // write the updated history back to local storage
-  localStorage.setItem("chat-history", JSON.stringify(updatedHistory));
+  localStorage.setItem('chat-history', JSON.stringify(updatedHistory));
 
   return updatedHistory;
 };
 
 export default function ChatInterface() {
-  const [userQuery, setUserQuery] = useState("");
-  const [modelResponse, setModelResponse] = useState("");
+  const [userQuery, setUserQuery] = useState('');
+  const [modelResponse, setModelResponse] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     e.preventDefault();
     console.log(userQuery);
-    fetch("/chat", {
-      method: "POST",
+    fetch('/chat', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         user_query: userQuery,
-        chat_history: localStorage.getItem("chat-history"), // backend handles if this is null
+        chat_history: localStorage.getItem('chat-history'), // backend handles if this is null
       }),
     })
       .then(res => {
         setLoading(false);
-        setUserQuery("");
+        setUserQuery('');
         return res.json();
       })
       .then(data => {
@@ -62,19 +62,19 @@ export default function ChatInterface() {
   };
 
   return (
-    <div className="my-5 w-full">
+    <div className='my-5 w-full'>
       <form onSubmit={handleSubmit}>
         <input
-          type="text"
+          type='text'
           onChange={e => setUserQuery(e.target.value)}
           value={userQuery}
-          placeholder="Chat with Nirav: Ask me anything..."
-          className="chat-input input input-bordered w-96 p-4 rounded-lg"
+          placeholder='Chat with Nirav: Ask me anything...'
+          className='chat-input input input-bordered w-[80%] sm:w-96 p-4 rounded-lg'
         />
       </form>
       {(modelResponse || loading) && (
-        <div className="chat-bubble m-auto w-2/3 lg:w-1/2 my-4">
-          {loading ? "Nirav is thinking..." : modelResponse}
+        <div className='chat-bubble m-auto w-2/3 lg:w-1/2 my-4'>
+          {loading ? 'Nirav is thinking...' : modelResponse}
         </div>
       )}
     </div>

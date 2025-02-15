@@ -16,7 +16,7 @@ export default function Home() {
       <div className='animate-slideInLeft h-screen'>
         {' '}
         <div className='top-0 w-full h-auto pb-4 '>
-          <div className='intro-text text-center xl:text-left xl:w-2/3 pl-12 static top-0'>
+          <div className='intro-text text-center xl:text-left xl:w-2/3 xl:pl-12 static top-0'>
             {/* text */}
             <div className='pt-20'>
               <IntroTextHeader />
