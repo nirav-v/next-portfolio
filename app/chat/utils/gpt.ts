@@ -1,5 +1,5 @@
-import OpenAI from "openai";
-import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
+import OpenAI from 'openai';
+import { ChatCompletionMessageParam } from 'openai/resources/index.mjs';
 const openai = new OpenAI();
 
 export async function getGptResponse(
@@ -10,15 +10,16 @@ export async function getGptResponse(
   if (!chat_history) chat_history = [];
   const completion = await openai.chat.completions.create({
     messages: [
-      { role: "system", content: aiNiravPrompt(user_query) },
-      ...chat_history,
-      { role: "user", content: user_query },
+      { role: 'system', content: aiNiravPrompt(user_query) },
+      ...chat_history, // merge in the previous chat history before new user query
+      { role: 'user', content: user_query },
     ],
-    model: "gpt-3.5-turbo",
+    model: 'gpt-3.5-turbo',
+    store: true,
+    stream: true,
   });
 
-  // console.log(completion.choices[0]);
-  return completion.choices[0].message.content;
+  return completion;
 }
 
 function aiNiravPrompt(user_query: string) {
