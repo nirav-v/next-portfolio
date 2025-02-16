@@ -9,7 +9,7 @@ function CurrentWork(props: any) {
         <Link
           href={'https://www.symphonypartners.ca/'}
           target='__blank'
-          className='whitespace-nowrap transition-colors duration-500'>
+          className='whitespace-nowrap transition-colors text-sky-500 hover:text-sky-300 hover:underline duration-500'>
           Symphony Partners
         </Link>{' '}
         developing{' '}
@@ -23,8 +23,8 @@ function CurrentWork(props: any) {
         <Link
           href={'https://www.symphonypartners.ca/'}
           target='__blank'
-          className='whitespace-nowrap text-sky-500  hover:text-sky-300 hover:underline transition-colors duration-500'>
-          company website
+          className='whitespace-nowrap hover:underline transition-colors duration-500'>
+          corporate website
         </Link>
       </p>
     </>
