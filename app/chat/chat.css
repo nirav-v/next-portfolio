@@ -1,7 +1,3 @@
 .chat-input {
   transition: width 300ms;
 }
-
-.chat-input:focus {
-  width: 32rem;
-}

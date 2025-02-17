@@ -89,7 +89,7 @@ export default function ChatInterface() {
           onChange={e => setUserQuery(e.target.value)}
           value={userQuery}
           placeholder='Chat with Nirav: Ask me anything...'
-          className='chat-input input input-bordered w-[80%] sm:w-96 p-4 rounded-lg'
+          className='chat-input input input-bordered w-10/12 sm:w-96 p-4 rounded-lg focus:w-11/12 sm:focus:w-8/12 xl:focus:w-6/12'
         />
       </form>
       {(streamedModelResponse || loading) && (
