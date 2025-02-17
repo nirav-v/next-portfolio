@@ -41,10 +41,10 @@ export default function Nav() {
               return (
                 <li
                   key={index}
-                  className={`list-none text-white text-2xl ${
+                  className={`list-none text-white text-2xl rounded px-1 hover:bg-primary transition-colors duration-300 ${
                     pathname === item.path
                       ? 'opacity-100 font-bold'
-                      : 'opacity-95 hover:opacity-100 transition-opacity'
+                      : 'opacity-95 hover:opacity-100'
                   }`}>
                   <Link href={item.path}>{item.title}</Link>
                 </li>
@@ -52,7 +52,7 @@ export default function Nav() {
             })}
           </ul>
           <ul className='hidden sm:flex items-center space-x-10 mx-10'>
-            <li>
+            <li className='rounded hover:bg-primary transition-colors duration-300'>
               <a href='https://github.com/nirav-v' target='__blank'>
                 <Image
                   src={'/static/logos/github-logo.png'}
@@ -62,7 +62,7 @@ export default function Nav() {
                 />
               </a>
             </li>
-            <li>
+            <li className='rounded hover:bg-primary transition-colors duration-300'>
               <a
                 href='https://www.linkedin.com/in/nirav-venkatesan/'
                 target='__blank'>
