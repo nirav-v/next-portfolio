@@ -40,7 +40,7 @@ const workExperiences = [
 
 const Resume = () => {
   return (
-    <div className='overflow-scroll'>
+    <div className=''>
       {workExperiences.map((experience, index) => (
         <div key={index} className='relative w-full  group transition-all '>
           {/* vertical line left */}

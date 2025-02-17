@@ -11,8 +11,15 @@ function SlideoutDrawer({
   setDrawerOpen: Dispatch<SetStateAction<boolean>>;
   children: React.ReactNode;
 }) {
-  // close drawer when click outside
   useEffect(() => {
+    // lock scroll on rest of body when drawer open
+    if (drawerOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // event listener to close drawer when click outside
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target;
 
@@ -39,7 +46,7 @@ function SlideoutDrawer({
       id='slideout-drawer'
       className={`slideout-drawer ${
         drawerOpen ? 'open' : 'closed'
-      } fixed h-screen top-0 right-0 bg-black w-full lg:w-1/2 flex flex-col items-center  text-white p-6 z-50`}>
+      } fixed h-screen top-0 right-0 bg-black w-full lg:w-1/2 flex flex-col items-center  text-white p-6 z-50 overflow-scroll`}>
       <div className='w-full flex justify-end items-start'>
         <button
           className='btn btn-square btn-outline m-2'

@@ -17,25 +17,6 @@ const routes: {
 export default function Nav() {
   const pathname = usePathname();
 
-  // for mobile
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  function toggleMenu() {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-      document.body.style.overflow = '';
-    } else {
-      setIsMenuOpen(true);
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  useEffect(() => {
-    return function cleanup() {
-      document.body.style.overflow = '';
-    };
-  }, []);
-
   return (
     <>
       {' '}
