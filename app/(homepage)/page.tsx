@@ -1,13 +1,14 @@
 'use client';
-import ChatInterface from './chat/ChatInterface';
-import IntroTextHeader from '../components/IntroTextHeader';
+import ChatInterface from '../chat/ChatInterface';
+import IntroTextHeader from './components/IntroTextHeader';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import Resume from '@/components/Resume/Resume';
-import ButtonLink from '../components/buttons/ButtonLink';
-import SlideoutDrawer from '../components/SlideoutDrawer/SlideoutDrawer';
-import Projects from './projects/ProjectList';
+import ButtonLink from '../../components/buttons/ButtonLink';
+import SlideoutDrawer from '../../components/SlideoutDrawer/SlideoutDrawer';
+import Projects from '../projects/ProjectList';
+import JourneyAndProjectLinks from './components/JourneyAndProjectLinks';
 
 export default function Home() {
   const [journeyOpen, setJourneyOpen] = useState(false);
@@ -24,16 +25,12 @@ export default function Home() {
             <IntroTextHeader />
 
             {/* btn links */}
-            <div className='flex flex-col items-center xl:items-start relative z-1'>
-              <ButtonLink
-                label='My Journey'
-                onClick={() => setJourneyOpen(!journeyOpen)}
-              />
-              <ButtonLink
-                label='My Projects'
-                onClick={() => setProjectsOpen(!projectsOpen)}
-              />
-            </div>
+            <JourneyAndProjectLinks
+              journeyOpen={journeyOpen}
+              setJourneyOpen={setJourneyOpen}
+              projectsOpen={projectsOpen}
+              setProjectsOpen={setProjectsOpen}
+            />
           </div>
 
           <div className='shadow'>

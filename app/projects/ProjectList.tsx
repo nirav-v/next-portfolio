@@ -10,7 +10,7 @@ import {
 import { FaNodeJs } from 'react-icons/fa';
 import { SiExpress } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
-import CurrentWork from '../../components/IntroTextHeader/CurrentWork';
+import CurrentWork from '../(homepage)/components/IntroTextHeader/CurrentWork';
 
 const projectsList: ProjectType[] = [
   {
