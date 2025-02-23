@@ -17,14 +17,14 @@ export default function Home() {
     <>
       <div className='animate-slideInLeft min-h-screen'>
         {' '}
-        <div className='top-0 w-full h-auto pb-4 '>
+        <div className='pt-5 w-full h-auto pb-4 '>
           <div className='intro-text text-center xl:text-left xl:w-2/3 xl:pl-12 static top-0'>
             {/* text */}
-            <div className='pt-20'>
-              <IntroTextHeader />
-            </div>
+
+            <IntroTextHeader />
+
             {/* btn links */}
-            <div className='flex flex-col mt-12 items-center xl:items-start relative z-1'>
+            <div className='flex flex-col items-center xl:items-start relative z-1'>
               <ButtonLink
                 label='My Journey'
                 onClick={() => setJourneyOpen(!journeyOpen)}

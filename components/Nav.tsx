@@ -21,11 +21,11 @@ export default function Nav() {
     <>
       {' '}
       {/* need to add a mobile navbar to show on sm screens */}
-      <div className='top-0 p-5 bg-black z-30 bg-gradient-to-b '>
+      <div className='top-0 pt-5 bg-black z-30 bg-gradient-to-b '>
         <nav className='flex items-center justify-between m-auto xl:w-[90%] py-6 lg:py-1'>
           <Link href={'/'}>
             <Image
-              className='rounded-full shadow-white shadow-[0px_0px_5px_2px] absolute top-4 z-10'
+              className='rounded-full shadow-white shadow-[0px_0px_5px_2px] mx-5'
               priority
               loading='eager'
               src='/headshot.png'
