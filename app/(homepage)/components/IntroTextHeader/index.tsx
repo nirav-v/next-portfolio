@@ -1,6 +1,6 @@
-import React from 'react';
-import CurrentWork from './CurrentWork';
-import HiImNirav from './HiNirav';
+import React from "react";
+import CurrentWork from "./CurrentWork";
+import HiImNirav from "./HiNirav";
 
 function IntroTextHeader() {
   return (
@@ -14,8 +14,8 @@ function IntroTextHeader() {
         <h1 className='heroTitle inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-2xl lg:text-4xl tracking-tighter mb-5 font-bold heroShinyBg'>
           <span className='block md:inline heroShiny1 text-nowrap'>
             Full Stack Software Engineer
-          </span>{' '}
-          based in <span className='whitespace-nowrap'>San Diego, CA</span>
+          </span>{" "}
+          based in <span className='whitespace-nowrap'>San Jose, CA</span>
         </h1>
       </div>
     </div>
