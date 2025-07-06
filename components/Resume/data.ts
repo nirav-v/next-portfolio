@@ -11,7 +11,7 @@ export const workExperiences = [
   },
   {
     title: 'Full Stack Developer @Symphony Partners',
-    date: 'May 2024 - Present',
+    date: 'May 2024 - May 2025',
     location: 'San Diego, CA',
     points: [
       'Rebuilt the Symphony Partners website using Next.js and TypeScript, enhancing UI, improving DevEx, and optimizing performance with modern React and server components.',
