@@ -20,10 +20,10 @@ function JourneyAndProjectLinks({
         label='My Journey'
         onClick={() => setJourneyOpen(!journeyOpen)}
       />
-      <ButtonLink
+      {/* <ButtonLink
         label='My Projects'
         onClick={() => setProjectsOpen(!projectsOpen)}
-      />
+      /> */}
     </div>
   );
 }
