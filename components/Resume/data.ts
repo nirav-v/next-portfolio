@@ -4,8 +4,9 @@ export const workExperiences = [
     date: 'May 2025 - Present',
     location: 'San Jose, CA',
     points: [
-     'Building and shipping software in real time for client facing projects. Working within dynamic engineering and product teams to deliver robust, scalable solutions.',
-     'Growing as an engineer, team member, and leader. Both learning from and teaching others to help them grow as well.'
+     'Build and ship full-stack web and mobile applications in a fast-paced, client-facing agency environment, delivering production code used by thousands of users.',
+    'Develop React web applications and React Native mobile apps using TypeScript, Node.js, Prisma, and PostgreSQL.',
+    'Own features end-to-end, from requirements gathering and system design through implementation, release, and post-launch support.'
     ],
     dotColor: 'bg-white', // default dot color
   },
