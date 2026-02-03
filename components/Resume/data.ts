@@ -2,7 +2,7 @@ export const workExperiences = [
   {
     title: 'Full Stack Engineer @FYC Labs',
     date: 'May 2025 - Present',
-    location: 'San Jose, CA',
+    location: 'San Francisco, CA',
     points: [
      'Build and ship full-stack web and mobile applications in a fast-paced, client-facing agency environment, delivering production code used by thousands of users.',
     'Develop React web applications and React Native mobile apps using TypeScript, Node.js, Prisma, and PostgreSQL.',
