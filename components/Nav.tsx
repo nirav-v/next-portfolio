@@ -26,13 +26,13 @@ export default function Nav() {
         <nav className='flex items-center justify-between m-auto xl:w-[90%] py-6 lg:py-1'>
           <Link href={'/'}>
             <Image
-              className='rounded-full shadow-white shadow-[0px_0px_5px_2px] mx-5'
+              className='mx-5 rounded-full object-cover shadow-[0_0_12px] shadow-violet-300'
               priority
               loading='eager'
               src='/headshot.png'
-              alt='dev-icon'
-              width={150}
-              height={150}
+              alt='Portrait of Nirav Venkatesan'
+              width={128}
+              height={128}
             />
           </Link>
           <MobileNav />
