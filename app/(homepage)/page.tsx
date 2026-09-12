@@ -1,11 +1,11 @@
 'use client';
-import ChatInterface from '../chat/ChatInterface';
+// import ChatInterface from '../chat/ChatInterface';
 import IntroTextHeader from './components/IntroTextHeader';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import Resume from '@/components/Resume/Resume';
-import ButtonLink from '../../components/buttons/ButtonLink';
+import DnaHelix from '@/components/DnaHelix/DnaHelix';
 import SlideoutDrawer from '../../components/SlideoutDrawer/SlideoutDrawer';
 import Projects from '../projects/ProjectList';
 import JourneyAndProjectLinks from './components/JourneyAndProjectLinks';
@@ -48,8 +48,10 @@ export default function Home() {
         <div
           className='relative w-full m-auto flex justify-center text-center flex-col items-center z-1'
           style={{ maxWidth: '1200px' }}>
-          <ChatInterface />
+          {/* <ChatInterface /> */}
         </div>
+             {/* dna helix */}
+            <DnaHelix />
       </div>
       <SlideoutDrawer drawerOpen={journeyOpen} setDrawerOpen={setJourneyOpen}>
         <Resume />
