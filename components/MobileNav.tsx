@@ -37,30 +37,6 @@ function MobileNav() {
               </li>
             ))}
           </ul>
-          <ul className='flex flex-col items-center space-y-4 text-white text-xl'>
-            <li>
-              <Link href='https://github.com/nirav-v' target='_blank'>
-                <Image
-                  src={'/static/logos/github-logo.png'}
-                  alt='github'
-                  width={75}
-                  height={75}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='https://www.linkedin.com/in/nirav-venkatesan/'
-                target='_blank'>
-                <Image
-                  src={'/static/logos/linkedin-logo.png'}
-                  alt='linkedin'
-                  width={30}
-                  height={30}
-                />
-              </Link>
-            </li>
-          </ul>
         </div>
       )}
     </div>
