@@ -40,26 +40,26 @@ const Resume = () => {
         </div>
       </section>
       {workExperiences.map((experience, index) => (
-        <div key={index} className='relative w-full  group transition-all '>
-          <div className=' group-hover:text-white relative flex flex-col items-start p-8 pl-12 transition-all transform g group-hover:shadow-lg '>
-            <div className='title-date text-left'>
-              <h3 className='text-lg font-bold'>{experience.title}</h3>
-              <p className='text-sm italic'>
-                {experience.employmentType || null}
-              </p>
-              <p className='text-sm italic'>
-                {experience.date} | {experience.location}
-              </p>
-            </div>
-            <ul className='mt-3 text-left text-sm list-disc'>
-              {experience.points.map((point, idx) => (
-                <li className='py-2' key={idx}>
-                  <Markdown className={'prose text-white'}>{point}</Markdown>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <article key={index} className='w-full px-8 py-8'>
+          <header className='text-left'>
+            <h3 className='text-lg font-bold'>{experience.title}</h3>
+            {experience.employmentType && (
+              <p className='text-sm italic'>{experience.employmentType}</p>
+            )}
+            <p className='text-sm italic'>
+              {experience.date} | {experience.location}
+            </p>
+          </header>
+          <ul className='mt-4 w-full list-disc space-y-3 pl-5 text-left text-sm marker:text-white/70'>
+            {experience.points.map((point, idx) => (
+              <li className='break-words pl-1 leading-relaxed' key={idx}>
+                <Markdown className='prose prose-invert max-w-none text-sm prose-p:my-0'>
+                  {point}
+                </Markdown>
+              </li>
+            ))}
+          </ul>
+        </article>
       ))}
     </div>
   );
