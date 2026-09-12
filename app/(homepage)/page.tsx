@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <div className='animate-slideInLeft min-h-screen'>
+      <div className='animate-slideInLeft'>
         {' '}
         <div className='pt-5 w-full h-auto pb-4 '>
           <div className='intro-text text-center xl:text-left xl:w-2/3 xl:pl-12 static top-0'>

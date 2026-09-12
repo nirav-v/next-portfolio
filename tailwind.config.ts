@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'icon-muted': 'rgb(var(--color-icon-muted) / <alpha-value>)',
+      },
       keyframes: {
         'letter-color': {
           '0%, 100%': { color: '#FF5733' },
