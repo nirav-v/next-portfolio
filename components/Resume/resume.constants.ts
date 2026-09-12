@@ -4,9 +4,9 @@ export const workExperiences = [
     date: 'May 2025 - Present',
     location: 'San Francisco, CA',
     points: [
-     'Build and ship full-stack web and mobile applications in a fast-paced, client-facing agency environment, delivering production code used by thousands of users.',
-    'Develop React web applications and React Native mobile apps using TypeScript, Node.js, Prisma, and PostgreSQL.',
-    'Own features end-to-end, from requirements gathering and system design through implementation, release, and post-launch support.'
+      'Build and ship full-stack web and mobile applications in a fast-paced, client-facing agency environment, delivering production code used by thousands of users.',
+      'Develop React web applications and React Native mobile apps using TypeScript, Node.js, Prisma, and PostgreSQL.',
+      'Own features end-to-end, from requirements gathering and system design through implementation, release, and post-launch support.',
     ],
     dotColor: 'bg-white', // default dot color
   },
@@ -33,7 +33,7 @@ export const workExperiences = [
     dotColor: 'bg-white', // default dot color
   },
   {
-    title: 'Web Development Instructional Specialist @2U, ',
+    title: 'Web Development Instructional Specialist @2U',
     employmentType: 'Contract',
     date: 'December 2022 - March 2024',
     location: 'San Diego, CA',

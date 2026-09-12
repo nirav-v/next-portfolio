@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Markdown from 'react-markdown';
-import { workExperiences } from './data';
+import { workExperiences } from './resume.constants';
 
 const Resume = () => {
   return (
@@ -13,7 +13,7 @@ const Resume = () => {
               My résumé
             </p>
             <p className='mt-2 text-sm text-white/70'>
-              Prefer the pdf? Download a copy to read or share offline.
+              Prefer the PDF? Download a copy to read or share offline.
             </p>
           </div>
           <a
@@ -47,7 +47,7 @@ const Resume = () => {
               <p className='text-sm italic'>{experience.employmentType}</p>
             )}
             <p className='text-sm italic'>
-              {experience.date} | {experience.location}
+              {experience.date} / {experience.location}
             </p>
           </header>
           <ul className='mt-4 w-full list-disc space-y-3 pl-5 text-left text-sm marker:text-white/70'>
