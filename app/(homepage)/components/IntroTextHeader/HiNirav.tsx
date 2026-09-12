@@ -1,40 +1,21 @@
-import Image from "next/image";
-import React from "react";
+import { Space_Grotesk } from "next/font/google";
+
+const nameFont = Space_Grotesk({
+  subsets: ["latin"],
+  weight: "600",
+});
 
 function HiImNirav() {
-  const colors = [
-    "#FF5733",
-    "#33FF57",
-    "#3357FF",
-    "#FF33A6",
-    "#57FF33",
-    "#5733FF",
-  ];
   return (
-    <>
-      <p className="rounded-full font-bold ">
-        {"Hi! I'm "}
-        {Array.from("Nirav").map((char, index) => {
-          // Check if the character is a space and preserve it
-          if (char === " ") {
-            return " ";
-          }
-
-          // Assign a color to each letter, cycling through the color array
-          const color = colors[index % colors.length];
-
-          return (
-            <span
-              key={index}
-              style={{ color: color }} // Assign unique color
-              className="inline-block animate-letter-color">
-              {char}
-            </span>
-          );
-        })}
-        <span className="px-2 inline-block animate-wave">👋🏽 </span>
-      </p>
-    </>
+    <p className="rounded-full font-bold">
+      {"Hi! I'm "}
+      <span
+        className={`${nameFont.className} inline-block bg-gradient-to-r from-pink-500 via-fuchsia-400 to-violet-400 bg-clip-text font-semibold tracking-tight text-transparent`}
+      >
+        Nirav
+      </span>
+      <span className="inline-block animate-wave px-2">👋🏽 </span>
+    </p>
   );
 }
 
