@@ -51,7 +51,7 @@ export default function Home() {
           {/* <ChatInterface /> */}
         </div>
              {/* dna helix */}
-            <DnaHelix />
+            {/* <DnaHelix /> */}
       </div>
       <SlideoutDrawer drawerOpen={journeyOpen} setDrawerOpen={setJourneyOpen}>
         <Resume />
