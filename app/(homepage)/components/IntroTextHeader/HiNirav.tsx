@@ -14,7 +14,11 @@ function HiImNirav() {
       >
         Nirav
       </span>
-      <span className="inline-block animate-wave px-2">👋🏽 </span>
+      <span className="group inline-block animate-wave-once px-2 motion-reduce:animate-none">
+        <span className="inline-block group-hover:animate-wave motion-reduce:group-hover:animate-none">
+          👋🏽
+        </span>
+      </span>
     </p>
   );
 }
