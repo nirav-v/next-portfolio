@@ -15,7 +15,7 @@ function IntroTextHeader() {
           <span className='block md:inline heroShiny1 text-nowrap'>
             Full Stack Software Engineer
           </span>{" "}
-          based in <span className='whitespace-nowrap'>San Jose, CA</span>
+          based in <span className='whitespace-nowrap'>San Francisco, CA</span>
         </h1>
       </div>
     </div>
